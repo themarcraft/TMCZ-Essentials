@@ -46,7 +46,6 @@ public class Vanish implements CommandExecutor {
         vanishedPlayers.add(player);
         player.setInvisible(true);
 
-        // Hide the vanished player from all online players
         for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
             if (!onlinePlayer.hasPermission("themarcraft.vanish.see")) {
                 onlinePlayer.hidePlayer(plugin, player);
@@ -60,7 +59,6 @@ public class Vanish implements CommandExecutor {
         vanishedPlayers.remove(player);
         player.setInvisible(false);
 
-        // Show the unvanished player to all online players
         for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
             onlinePlayer.showPlayer(plugin, player);
         }
