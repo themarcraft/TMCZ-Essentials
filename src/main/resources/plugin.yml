@@ -1,0 +1,104 @@
+name: TMCZ-Essentials
+version: '${project.version}'
+main: de.themarcraft.essentials.Main
+api-version: '1.20'
+depend: [ Vault, LuckPerms ]
+load: startup
+
+
+commands:
+  kick:
+    description: "Command for Kicking Players"
+    permission: 'themarcraft.kick'
+  ban:
+    description: "Command for Banning Players"
+    permission: 'themarcraft.ban'
+  bans:
+    description: "View Banned Players"
+    permission: 'themarcraft.seeBans'
+    aliases: [ seebans ]
+  unban:
+    description: "Command for Unbanning Players"
+    permission: 'themarcraft.ban'
+  team:
+    description: "Send a Team Message"
+    permission: 'themarcraft.team'
+    aliases: [ teammsg, tm ]
+  fly:
+    description: "Activate Flying"
+    permission: 'themarcraft.fly'
+  gm:
+    description: "Change your Gamemode"
+    permission: 'themarcraft.gm'
+  speed:
+    description: "Set your walk speed"
+    permission: 'themarcraft.speed'
+  vanish:
+    description: "Go into Vanish Mode"
+    permission: 'themarcraft.vanish'
+    aliases: [ v, invisible, invis ]
+  heal:
+    description: "Heal yourself or other people"
+    permission: 'themarcraft.heal'
+  feed:
+    description: "Feed yourself or other people"
+    permission: 'themarcraft.feed'
+  test:
+    permission: '*'
+  economy:
+    description: "Give yourself or other Players Cash"
+    permission: 'themarcraft.economy.eco'
+    aliases: [ eco ]
+  balance:
+    description: "View your or other Players Cash Balance"
+    permission: 'themarcraft.economy.balance'
+    aliases: [ money, bal, cash ]
+  serverselector:
+  pay:
+    description: "Pay Money to other Players"
+    permission: 'themarcraft.economy.pay'
+    aliases: [ givecash, givemoney ]
+permissions:
+  themarcraft.kick:
+    description: "Command for Banning Players"
+  themarcraft.ban:
+    description: "Command for Kicking Players"
+  themarcraft.ban.perma:
+    description: "Command for Banning Players for ever"
+  themarcraft.seeBans:
+    description: "Command for Seeing Banned Players"
+  themarcraft.team:
+    description: "Permission to recive Team Messages"
+  themarcraft.*:
+    description: "Permission for every command of this plugin"
+  themarcraft.fly:
+    description: 'Activate Flying'
+  themarcraft.fly.others:
+    description: 'Activate Flying for other people '
+  themarcraft.gm:
+    description: 'Change your Gamemode'
+  themarcraft.gm.other:
+    description: 'Change others Gamemode'
+  themarcraft.speed:
+    description: 'Change your Walk Speed'
+  themarcraft.vanish:
+    description: 'Go into Vanish Mode'
+  themarcraft.vanish.see:
+    description: 'See Vanished Players'
+  themarcraft.heal:
+    description: 'Heal yourself'
+  themarcraft.heal.other:
+    description: 'Heal Other Players'
+  themarcraft.feed:
+    description: 'Feed yourself'
+  themarcraft.feed.other:
+    description: 'Feed Other Players'
+  themarcraft.economy.eco:
+    description: 'Give yourself Cash'
+  themarcraft.economy.eco.other:
+    description: 'Give other Players Cash'
+  themarcraft.economy.balance:
+    description: 'View your Cash Balance'
+    default: true
+  themarcraft.economy.balance.other:
+    description: 'View other Players Cash Balance'

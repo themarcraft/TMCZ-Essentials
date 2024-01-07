@@ -1,0 +1,151 @@
+#######################################
+# Custom Messages by Marvin Niermann  #
+# '${project.version}' #
+#######################################
+
+#############################################################################
+# This Plugin Supports Colorcodes like '&a' or '§a'                         #
+#############################################################################
+# It also supports placeholders:                                            #
+# [Player] - Player Display Name                                            #
+# [Killer] - Person who killed a player (only available at 'DeathByPlayer') #
+# [Deaths] - Number of deaths from that Player                              #
+# [OnlinePlayers] - Number of Online Players                                #
+# [MaxPlayers] - Maximum of Players allowed to join                         #
+# [Version] - Server Version like 1.20.2                                    #
+# [VersionRound] - Server Version like 1.20                                 #
+# [ServerName] - Server Software Name like CraftBukkit                      #
+# [NewLine] - For a new Line                                                #
+# [Reason] - When you're kick / banned the reason                           #
+# [Banner] - Person who kick / banned the person                            #
+# [Duration] - The duration of the ban                                      #
+# [Until] - When the Ban ends                                               #
+# \_ - if you want to type _ because _ is space                             #
+#############################################################################
+# Multiply Messages are also supported, the Plugin select random between    #
+# the lines                                                                 #
+#############################################################################
+Server.Name: "Lobby"
+Messages:
+  Join:
+    - "&bHallo [Player]! [OnlinePlayers]/[MaxPlayers] [Version] [Servername] [VersionRound] [Deaths]"
+  Quit:
+    - "&4Tschau [Player]! [OnlinePlayers]/[MaxPlayers] [Version] [Servername] [VersionRound] [Deaths]"
+  Death:
+    - "&b[Player] ist gestorben xD! [OnlinePlayers]/[MaxPlayers] [Version] [Servername] [VersionRound] [Deaths]"
+    - "Was??? &b[Player] ist gestorben xD! [OnlinePlayers]/[MaxPlayers] [Version] [Servername] [VersionRound] [Deaths]"
+  DeathByPlayer:
+    - "&b[Player] wurde von [Killer] getötet! [OnlinePlayers]/[MaxPlayers] [Version] [Servername] [VersionRound] [Deaths]"
+  KickMessage: "&8================================[NewLine][NewLine]
+                &c&lDu wurdeset gekickt[NewLine][NewLine][NewLine]
+                &e&lVon: &r[Banner][NewLine][NewLine]
+                &e&lGrund: &r[Reason] [NewLine][NewLine]
+                &8================================"
+  BanMessage: "&8================================[NewLine][NewLine]
+                &c&lDu wurdeset gebannt[NewLine][NewLine][NewLine]
+                &e&lVon: &r[Banner][NewLine][NewLine]
+                &e&lGebannt bis: &r[Until][NewLine][NewLine]
+                &e&lGrund: &r[Reason] [NewLine][NewLine]
+                &8================================"
+  NoReason: "&a&lKein Grund"
+  ValidPlayer: "&cBitte gebe einen gültigen Spielernamen an"
+  ValidDuration: "&cBitte gebe die Dauer des Banns an"
+  ValidPlayerOffline: "&cDer Spieler [Player] ist Offline"
+  InvalidNumber: "&cBitte gebe eine gültige Zahl an"
+  InvalidTimeUnit: "&cBitte gebe eine gültige Zeiteinheit an"
+  UnbanSuccess: "&7Der Spieler &6[Player] &7wurde erfolgreich entbannt"
+  PlayerNotBanned: "&7Der Spieler &6[Player] &7ist nicht gebannt"
+  PermaBan: "&4&lPermanent"
+  NoPermission: "&cDafür hast du keine Rechte"
+  Disabled: "&cDieses Feature ist deaktiviert. Aktiviere dies in der 'config.yml' Datei"
+  ErrorMessage: "&cEs ist ein Fehler aufgetreten"
+  PlayerOnly: "&cDieser Befehl kann nur von einem Spieler ausgeführt werden"
+  TeamKickMessage: "&c[Player] &7wurde von &6[Banner] &7gekickt"
+  TeamBanMessage: "&c[Player] &7wurde von &6[Banner] &7für &b[Duration] gebannt"
+  TeamPrefix: "&6&l@TEAM &8| &r&7[Player] &8» &7"
+  FlyEnabled: "&7Du kannst nun fliegen"
+  FlyDisabled: "&7Du kannst nun nicht mehr fliegen"
+  FlyOtherDisabled: "&7Du hast den Flugmodus für &6[Player] &7deaktiviert"
+  FlyOtherEnabled: "&7Du hast den Flugmodus für &6[Player] &7aktiviert"
+  FlySpeed: "&7Die Flieg-Geschwindigkeit wurde erfolgreich auf &b[Speed] &7gesetzt" # [Speed] as Placeholder for the speed you set
+  FlyInvalidNumber: "&cBitte gebe eine gültige Zahl zwischen 1 und 10 an"
+  Gamemode:
+    Creative: "Kreativ"
+    Survival: "Überleben"
+    Spectator: "Zuschauer"
+    Adventure: "Abenteuer"
+    Success: "&7Dein Spielmodus wurde erfolgreich auf &b[Gamemode] &7gesetzt"
+    Invalid: "&7Bitte gebe einen gültigen Spiele modus an:\n0 - Überleben\n1 - Kreativ\n2 - Abenteuer\n3 - Zuschauer"
+    Other: "&7Der Spielmodus von &6[Player] &7wurde erfolgreich auf &b[Gamemode] &7gesetzt"
+  Speed:
+    Success: "&7Die Geh-Geschwindigkeit wurde erfolgreich auf &b[Speed] &7gesetzt"
+    Invalid: "&cBitte gebe eine gültige Zahl zwischen 1 und 10 an"
+  Vanish:
+    Enabled: "&7Du bist nun Unsichtbar"
+    Disabled: "&7Du bist nun Sichtbar"
+  Heal:
+    Success: "&7Du wurdest erfolgreich geheilt"
+    Other: "&6[Player] &7wurde erfolgreich geheilt"
+  Feed:
+    Success: "&7Dein Hunger wurde erfolgreich gesättigt"
+    Other: "&7Der Hunger von &6[Player] &7wurde erfolgreich gesättigt"
+  Economy:
+    Syntax: "&cSyntax: /eco <give|take> <number|[player]> [<number>]"
+    NotEnoughMoney: "&cDu hast nicht genügend Geld, um diese Aktion auszuführen"
+    Pay.You: "&7Du hast erfolgreich &6[Player] &b[Amount] &7überwiesen. Du hast nun noch &b[Balance] &7auf deinem Konto"
+    Pay.Other: "&7Du &b[Amount] &7von &6[Player] &7überwiesen bekommen. Du hast nun &b[Balance] &7auf deinem Konto"
+    Pay.*: "&7Du hast erfolgreich jedem Spieler &b[Amount] &7überwiesen. Du hast nun noch &b[Balance] &7auf deinem Konto"
+    Give:
+      Success: "&7Du hast erfolgreich &b[Amount] &7erhalten"
+      Other: "&7Du hast erfolgreich &6[Player] &b[Amount] &7gegeben"
+    Take:
+      Success: "&7Dir wurde erfolgreich &b[Amount] &7abgezogen"
+      Other: "&7Du hast erfolgreich &6[Player] &b[Amount] &7abgezogen"
+    Set:
+      Success: "&7Du hast erfolgreich deinen Kontostand auf &b[Amount] &7gesetzt"
+      Other: "&7Du hast erfolgreich den Kontostand von &6[Player] &7auf &b[Amount] &7gesetzt"
+  Balance:
+    You: "&7Du hast &b[Amount] &7auf dem Konto"
+    Other: "&6[Player] &7hat &b[Amount] &7auf dem Konto"
+
+#################################
+# Date Format                   #
+# dd - is the day               #
+# MM - is the month             #
+# yyyy - is the year            #
+# HH - is the hour              #
+# mm - are the minutes          #
+# ss - are the seconds          #
+#################################
+DateFormat: "dd.MM.yyyy HH:mm:ss"
+ChatFormat: "[Prefix] &8| &7[Player] &8» &7[Message]"
+# To Enable the features formatPlayer 'false' with 'true' or 'true' with 'false'
+Enabled:
+  DeathMessage: true
+  JoinMessage: true
+  QuitMessage: true
+  CustomKickCommand: true
+  CustomBanCommand: true
+Prefix: '&athemarcraft.de &7» &r'
+KickAutocompleteList:
+  - "Spam"
+  - "Griefing"
+  - "Zu_lange_AFK"
+  - "Flying"
+BanAutocompleteList:
+  - "Spam"
+  - "Hacken"
+  - "Griefen"
+  - "Bugusing"
+Tablist:
+  Header: '&8===================&8&l[&a&l themarcraft&4&l.de &8&l]&8===================&r[NewLine][NewLine]&a&lOnline: [OnlinePlayers]/[MaxPlayers][NewLine]'
+  Footer: '[NewLine]&3&lDiscord&7: &b&ldsc.gg/tmcz &f&l♦ &c&lYoutube&7: &b&l@_TheMarCraft_'
+SQL:
+  Host: '127.0.0.1'
+  Database: 'tmcz_Network'
+  Username: 'user'
+  Password: '1234'
+#############################################################################
+# Player Data                                                               #
+#############################################################################
+Stats:
