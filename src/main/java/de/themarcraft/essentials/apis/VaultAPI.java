@@ -33,12 +33,10 @@ public class VaultAPI implements Economy {
 
         RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
         if (rsp == null) {
-            // Use 'this' to refer to the current instance of your JavaPlugin class
             getServer().getServicesManager().register(Economy.class, this, plugin, ServicePriority.High);
             rsp = getServer().getServicesManager().getRegistration(Economy.class);
         }
 
-        // Set the 'economy' field to the provider from the registration
         economy = rsp.getProvider();
         if (economy != null) {
             plugin.log(ChatColor.GREEN + "VaultAPI Loaded");
@@ -51,9 +49,6 @@ public class VaultAPI implements Economy {
         }
     }
 
-    // Implement the rest of the methods in the Economy interface as needed
-
-    // Example: implement isEnabled
     public boolean isEnabled() {
         return economy != null;
     }
